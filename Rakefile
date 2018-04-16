@@ -2,10 +2,9 @@ require 'active_record'
 require 'yaml'
 
 namespace :counter do
-  desc "Initialize the `urls` table in the DB"
+  desc 'Initializes the `urls` table in the database'
   task :init do
-    config = YAML.load_file(__dir__ + '/lib/config/database.yml')[ENV["RAILS_ENV"] || "development"]
-    
+    config = YAML.load_file(__dir__ + '/lib/config/database.yml')[ENV["RAILS_ENV"] || "development"]  
     ActiveRecord::Base.establish_connection config
     next if ActiveRecord::Base.connection.table_exists? 'urls'
 
@@ -17,4 +16,4 @@ namespace :counter do
       end
     end
   end
-end 
+end

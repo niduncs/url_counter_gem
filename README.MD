@@ -3,7 +3,11 @@ By Niall Duncan
 
 ### Usage
 - If you don't have an existing `urls` table with the fields `url`, `count`, and `date` run `rake counter:init` to create one
-- `gem install url_counter_gem` and `require('url_counter_gem')`
+
+### Installation
+- `gem build url_counter_gem.gemspec`
+- `gem install url_counter_gem-0.0.0.gem`
+- `require('url_counter_gem')`
 
 ### Methods
 
