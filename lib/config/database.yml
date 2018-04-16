@@ -1,0 +1,6 @@
+development:
+  adapter: postgresql
+  host: localhost
+  user: admin
+  password: secret
+  database: url_counter

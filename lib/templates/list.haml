@@ -1,0 +1,19 @@
+!!!
+%html
+  %head
+    %title List of URLs
+    :javascript
+      const answer = window.prompt('Password please');
+      if (answer !== '#{password}') window.location = 'https://google.ca';
+
+  %body
+    %table
+      %tr
+        %td URL
+        %td Visitor Count
+        %td Date
+      - urls.each do |url|
+        %tr
+          %td= url.url
+          %td= url.count
+          %td= url.date
